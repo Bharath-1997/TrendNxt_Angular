@@ -1,0 +1,17 @@
+<h3 class="sibling-hover">Assingment1:</h3>
+                <table class="sibling-highlight">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Location</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let emp of employees">
+                            <td>{{ emp.name }}</td>
+                            <td>{{ emp.location }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+       

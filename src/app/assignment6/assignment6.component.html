@@ -1,0 +1,47 @@
+<h3 class="sibling-hover">Assingment6(with links on each product):</h3>
+<div class="container p-3" style="margin-top: 50px;margin-left: 200px;">
+    <div class="row">
+        <div class="col-xs-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let pro of this.service.products">
+                        <td><a routerLink="/productprofile/{{pro.name}}">{{ pro.name }}</a></td>
+                        <td>{{ pro.quantity }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xs-6" style="margin-left: 100px;">
+            <h3>Product Add</h3> 
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <input type="text" name="fullName" [(ngModel)]="name" class="form-control" placeholder="product Name" required>
+                         
+                    </div>
+                </div>
+            </div>          
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <input type="text" name="quantity" [(ngModel)]="quantity" class="form-control" placeholder="Quantity" required>
+                         
+                    </div>
+                </div>
+            </div> 
+            <div class="form-group">
+                <button type="submit" class="btn btn-lg btn-block btn-info" (click)="save()">submit</button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+                
+       
